@@ -368,9 +368,26 @@ a {
     overflow: hidden;
     margin:2px 0 2px 5px;
 }
-
-
-
-
+/**个人中心**/
+.ucenter-bar {
+	background: none repeat scroll 0 0 #fff;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.22);
+}
+.ucenter-bar > li > a{
+	background: none repeat scroll 0 0 #eee;
+}
+.ucenter-bar-two {
+	padding : 0px 15px;
+}
+.ucenter-content{
+	width : 100%;
+	/** : 600px;**/
+	background: none repeat scroll 0 0 #fff;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.22);
+    text-align: center;
+    padding:30px 0 20px 20px;
+}
 
 
