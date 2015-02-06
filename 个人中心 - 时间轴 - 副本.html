@@ -120,9 +120,146 @@
 							    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">03日</a></li>
 							    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">04日</a></li>
 							  </ul>
-							</div>
-							</li>
+							</div></li>
 					</ol>
+					<div class="ucenter-content" style="margin-bottom: 18px;">
+						<form class="form-horizontal" role="form">
+						<div class="col-sm-6">
+						    <div class="form-group">
+						         <select multiple class="form-control">
+								  <option>种植业</option>
+								  <option>养殖业</option>
+								  <option>食品加工</option>
+								  <option>其他</option>
+								</select>
+						   </div>
+						   <div class="form-group">
+						        <textarea class="form-control" rows="3"></textarea>
+						   </div>
+						</div>
+						<div class="form-group">
+						      <div class="col-sm-6" style="padding-left: 5px;">
+						      	 <div>
+									<div class="mod18">
+										<span id="prev" class="btn prev"></span>
+										<span id="next" class="btn next"></span>
+										<div id="listBox" class="listBox">
+											<ul class="cf">
+												<li class="on"><i class="arr2"></i><img width="110" src="images/01s.jpg" alt="心壁纸" /></li>
+												<li><i class="arr2"></i><img width="117" src="images/person.jpg" alt="logo设计" /></li>
+												<li><i class="arr2"></i><img width="117" src="http://b198.photo.store.qq.com/psb?/948066db-542c-4510-93ec-30f6ac45ad7d/XsJHEOYFPfBQx5QzFolE5MMq*ZOvOsB7RwlnzbIghIA!/b/dIHyBXZ2HAAA&bo=EwLiARMC4gEFCSo!" alt="猎豹logo" /></li>
+												<li><i class="arr2"></i><img width="117" src="images/04s.jpg" alt="CSS3按钮" /></li>
+												<li><i class="arr2"></i><img width="117" src="images/05s.jpg" alt="CSS3相册" /></li>
+												<li><i class="arr2"></i><img width="117" src="images/06s.jpg" alt="CSS3动画" /></li>
+												<li><i class="arr2"></i><img width="117" src="images/07s.jpg" alt="PSD电池素材" /></li>
+												<li><i class="arr2"></i><img width="117" src="images/08s.jpg" alt="蝴蝶结素材" /></li>
+											</ul>
+										</div>
+									</div>
+								<script type="text/javascript">
+								<!--
+								(function(){
+									function G(s){
+										return document.getElementById(s);
+									}
+									
+									function getStyle(obj, attr){
+										if(obj.currentStyle){
+											return obj.currentStyle[attr];
+										}else{
+											return getComputedStyle(obj, false)[attr];
+										}
+									}
+									
+									function Animate(obj, json){
+										if(obj.timer){
+											clearInterval(obj.timer);
+										}
+										obj.timer = setInterval(function(){
+											for(var attr in json){
+												var iCur = parseInt(getStyle(obj, attr));
+												iCur = iCur ? iCur : 0;
+												var iSpeed = (json[attr] - iCur) / 5;
+												iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+												obj.style[attr] = iCur + iSpeed + 'px';
+												if(iCur == json[attr]){
+													clearInterval(obj.timer);
+												}
+											}
+										}, 30);
+									}
+								
+									//var oPic = G("picBox");
+									var oList = G("listBox");
+									
+									var oPrev = G("prev");
+									var oNext = G("next");
+									var oPrevTop = G("prevTop");
+									var oNextTop = G("nextTop");
+								
+									//var oPicLi = oPic.getElementsByTagName("li");
+									var oListLi = oList.getElementsByTagName("li");
+									//var len1 = oPicLi.length;
+									var len2 = oListLi.length;
+									
+									//var oPicUl = oPic.getElementsByTagName("ul")[0];
+									var oListUl = oList.getElementsByTagName("ul")[0];
+									//var w1 = oPicLi[0].offsetWidth;
+									var w2 = oListLi[0].offsetWidth;
+								
+									//oPicUl.style.width = w1 * len1 + "px";
+									oListUl.style.width = w2 * len2 + "px";
+								
+									var index = 0;
+									
+									var num = 5;
+									var num2 = Math.ceil(num / 2);
+								
+									function Change(){
+										//Animate(oPicUl, {left: - index * w1});	
+										if(index < num2){
+											Animate(oListUl, {left: 0});
+										}else if(index <= len2){
+											Animate(oListUl, {left: - (index - num2 + 1) * w2});
+										}else{
+											Animate(oListUl, {left: - (len2 - num) * w2});
+										}
+										for (var i = 0; i < len2; i++) {
+											oListLi[i].className = "";
+											if(i == index){
+												oListLi[i].className = "on";
+											}
+										}
+									}
+									 oNext.onclick = function(){
+										index ++;
+										index = index == len2 ? 0 : index;
+										Change();
+									}
+									oPrev.onclick = function(){
+										index --;
+										index = index == -1 ? len2 -1 : index;
+										Change();
+									}
+									for (var i = 0; i < len2; i++) {
+										oListLi[i].index = i;
+										oListLi[i].onclick = function(){
+											index = this.index;
+											Change();
+										}
+									}
+								})()
+								//-->
+								</script>
+								</div>
+						         <div style="padding:8px 10px;">
+						         	<button type="submit" class="btn btn-default" style="float:left">上传图片</button>
+						         	<button type="submit" class="btn btn-success" style="float:right;">提	交</button>
+						         </div>
+						      </div>
+						  </div>
+						</form>
+					</div>
 					<div class="row" style="padding:2px;background-color: #e9e9e9;"></div>
 					<div>
 						<div class="time-day ">2015/01</div>
